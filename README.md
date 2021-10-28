@@ -13,3 +13,12 @@ A new Flutter project.
 - add advice_field.dart
 - add custom_button.dart
 - add error_message.dart
+
+## v0.3 - add Application Layer
+- add packages bloc and flutter_bloc
+- update main.dart
+- update advice_page.dart
+- update custom_button.dart
+- add advice_bloc.dart
+- add advice_event.dart
+- add advice_state.dart
