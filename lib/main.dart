@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advice/application/advice/advice_bloc.dart';
 import 'package:flutter_advice/presentation/advice/advice_page.dart';
 import 'package:flutter_advice/theme.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,10 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.dark,
-      home: const AdvicePage(),
+      home: BlocProvider(
+        create: (BuildContext context) => AdviceBloc(),
+        child: const AdvicePage(),
+      ),
       debugShowCheckedModeBanner: false,
     );
   }
