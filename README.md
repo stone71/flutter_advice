@@ -6,3 +6,10 @@ A new Flutter project.
 - execution of 'flutter create flutter_advice'
 - remove unnecessary code (empty project)
 - update themedata('theme.dart') and main
+
+## v0.2 - add Presentation Layer
+- update main.dart
+- add advice_page.dart
+- add advice_field.dart
+- add custom_button.dart
+- add error_message.dart

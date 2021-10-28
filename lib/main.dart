@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advice/presentation/advice/advice_page.dart';
 import 'package:flutter_advice/theme.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.dark,
-      home: const Placeholder(),
+      home: const AdvicePage(),
       debugShowCheckedModeBanner: false,
     );
   }
