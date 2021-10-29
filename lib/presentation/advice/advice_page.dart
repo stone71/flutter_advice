@@ -14,7 +14,7 @@ class AdvicePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Advicer", style: themeData.textTheme.headline1),
+        title: Text("Advice App", style: themeData.textTheme.headline1),
       ),
       body: Center(
         child: Padding(
@@ -25,7 +25,7 @@ class AdvicePage extends StatelessWidget {
                 child: Center(
                   child: BlocBuilder<AdviceBloc, AdviceState>(
                       bloc: BlocProvider.of<AdviceBloc>(context),
-                      //bloc: BlocProvider.of<AdvicerBloc>(context)..add(AdviceRequestedEvent()),
+                      //bloc: BlocProvider.of<AdviceBloc>(context)..add(AdviceRequestedEvent()),
                       // INFO Verwendung nur ein state und values,
                       // dann nur Ausführung wenn etwas bestimmtes geändert wurde
                       // buildWhen: (p, c) { return p != c; },

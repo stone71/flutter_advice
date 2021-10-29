@@ -26,7 +26,7 @@ class AdviceRemoteDatasourceImpl implements AdviceRemoteDatasource {
     );
 
     if (response.statusCode != 200) {
-      throw SeverException();
+      throw ServerException();
     } else {
       final responseBody = json.decode(response.body);
 

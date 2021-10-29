@@ -1,9 +1,11 @@
+import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
+import 'package:equatable/equatable.dart';
+import 'package:meta/meta.dart';
+
 import 'package:flutter_advice/domain/entities/advice_entity.dart';
 import 'package:flutter_advice/domain/failures/failures.dart';
 import 'package:flutter_advice/domain/usecases/advice_usecases.dart';
-import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
-import 'package:meta/meta.dart';
 
 part 'advice_event.dart';
 part 'advice_state.dart';

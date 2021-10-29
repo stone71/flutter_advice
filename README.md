@@ -53,3 +53,19 @@ A new Flutter project.
 - update advice_remote_datasource.dart
 - update advice_usecases.dart
 - update advice_bloc.dart
+
+## v0.7 - Unit Testing
+- add dev packages mockito and build_runner
+- execute 'dart run build_runner build --delete_conflicting_outputs' to generate mocks
+- add fixtures/advice.json
+- add fixtures/advice_http_respond.json
+- add fixtures/fixture_reader.dart
+- add application/advice/advice_bloc_test.dart
+- add application/advice/advice_bloc_test.mocks.dart
+- add domain/usecases/advice_usecases_test.dart
+- add domain/usecases/advice_usecases_test.mocks.dart
+- add infrastructure/datasource/advice_remote_datasource_test.dart
+- add infrastructure/datasource/advice_remote_datasource_test.mocks.dart
+- add infrastructure/models/advice_model_test.dart
+- add infrastructure/repository/advice_repository_test.dart
+- add infrastructure/repository/advice_repository_test.mocks.dart
