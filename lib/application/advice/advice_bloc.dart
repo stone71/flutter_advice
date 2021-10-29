@@ -12,9 +12,7 @@ const GENERAL_FAILURE_MESSAGE = "Ups, something gone wrong. Please try again!";
 const SERVER_FAILURE_MESSAGE = "Ups, API Error. please try again!";
 
 class AdviceBloc extends Bloc<AdviceEvent, AdviceState> {
-  AdviceBloc() : super(AdviceInitial()) {
-    final usecases = AdviceUsecases();
-
+  AdviceBloc(AdviceUsecases usecases) : super(AdviceInitial()) {
     on<AdviceEvent>((event, emit) async {
       emit(AdviceStateLoading());
       // do something

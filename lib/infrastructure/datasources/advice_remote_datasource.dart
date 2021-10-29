@@ -5,14 +5,15 @@ import 'package:flutter_advice/infrastructure/models/advice_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-abstract class AdvicerRemoteDatasource {
+abstract class AdviceRemoteDatasource {
   /// requests a randmom advice from free api
   /// throws a server-Exception if respond code is not 200
   Future<AdviceEntity> getRandomAdviceFromApi();
 }
 
-class AdvicerRemoteDatasourceImpl implements AdvicerRemoteDatasource {
-  final http.Client client = http.Client();
+class AdviceRemoteDatasourceImpl implements AdviceRemoteDatasource {
+  final http.Client client;
+  AdviceRemoteDatasourceImpl({required this.client});
 
   @override
   Future<AdviceEntity> getRandomAdviceFromApi() async {

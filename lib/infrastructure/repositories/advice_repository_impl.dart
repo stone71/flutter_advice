@@ -6,13 +6,14 @@ import 'package:flutter_advice/infrastructure/exceptions/exceptions.dart';
 import 'package:dartz/dartz.dart';
 
 class AdviceRepositoryImpl implements AdviceRepository {
-  final AdvicerRemoteDatasource advicerRemoteDatasource =
-      AdvicerRemoteDatasourceImpl();
+  final AdviceRemoteDatasource adviceRemoteDatasource;
+  AdviceRepositoryImpl({required this.adviceRemoteDatasource});
+
   @override
   Future<Either<Failure, AdviceEntity>> getAdviceFromApi() async {
     try {
       final remoteAdvice =
-          await advicerRemoteDatasource.getRandomAdviceFromApi();
+          await adviceRemoteDatasource.getRandomAdviceFromApi();
       return Right(remoteAdvice);
     } catch (e) {
       if (e.runtimeType is SeverException) {

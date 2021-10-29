@@ -44,3 +44,12 @@ A new Flutter project.
 - update advice_repository.dart
 - update advice_bloc.dart
 - update main.dart
+
+## v0.6 - add DI clean architecture
+- add package get_it
+- add injection.dart
+- update main.dart
+- update advice_repository_impl.dart
+- update advice_remote_datasource.dart
+- update advice_usecases.dart
+- update advice_bloc.dart
