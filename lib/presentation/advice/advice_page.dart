@@ -5,8 +5,8 @@ import 'package:flutter_advice/presentation/advice/widgets/error_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AdvicerPage extends StatelessWidget {
-  const AdvicerPage({Key? key}) : super(key: key);
+class AdvicePage extends StatelessWidget {
+  const AdvicePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
