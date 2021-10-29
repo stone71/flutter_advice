@@ -22,3 +22,14 @@ A new Flutter project.
 - add advice_bloc.dart
 - add advice_event.dart
 - add advice_state.dart
+
+## v0.4 - add Domain Layer
+- add package dartz
+- update error_message.dart
+- update advice_page.dart
+- update advice_state.dart
+- update advice_bloc.dart
+- add advice_usecases.dart
+- add advice_repository.dart
+- add failures.dart
+- add advice_entities.dart
