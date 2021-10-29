@@ -12,4 +12,7 @@ class AdviceStateLoaded extends AdviceState {
   AdviceStateLoaded({required this.advice});
 }
 
-class AdviceStateError extends AdviceState {}
+class AdviceStateError extends AdviceState {
+  final String message;
+  AdviceStateError({required this.message});
+}

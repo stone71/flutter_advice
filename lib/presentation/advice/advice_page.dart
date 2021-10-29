@@ -5,8 +5,8 @@ import 'package:flutter_advice/presentation/advice/widgets/error_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AdvicePage extends StatelessWidget {
-  const AdvicePage({Key? key}) : super(key: key);
+class AdvicerPage extends StatelessWidget {
+  const AdvicerPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class AdvicePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Advice App", style: themeData.textTheme.headline1),
+        title: Text("Advicer", style: themeData.textTheme.headline1),
       ),
       body: Center(
         child: Padding(
@@ -24,8 +24,8 @@ class AdvicePage extends StatelessWidget {
               Expanded(
                 child: Center(
                   child: BlocBuilder<AdviceBloc, AdviceState>(
-                      bloc: BlocProvider.of<AdviceBloc>(context)
-                        ..add(AdviceRequestedEvent()),
+                      bloc: BlocProvider.of<AdviceBloc>(context),
+                      //bloc: BlocProvider.of<AdvicerBloc>(context)..add(AdviceRequestedEvent()),
                       // INFO Verwendung nur ein state und values,
                       // dann nur Ausführung wenn etwas bestimmtes geändert wurde
                       // buildWhen: (p, c) { return p != c; },
@@ -44,7 +44,9 @@ class AdvicePage extends StatelessWidget {
                             advice: adviceState.advice,
                           );
                         } else if (adviceState is AdviceStateError) {
-                          return const ErrorMessage();
+                          return ErrorMessage(
+                            message: adviceState.message,
+                          );
                         }
                         return const Placeholder();
                       }),
