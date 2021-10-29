@@ -33,3 +33,14 @@ A new Flutter project.
 - add advice_repository.dart
 - add failures.dart
 - add advice_entities.dart
+
+## v0.5 - add Infrastructure Layer
+- add packages equatable and http
+- add advice_remote_datasource.dart
+- add exceptios.dart
+- add advice_model.dart
+- add advice_repository_impl.dart
+- update advice_usecases.dart
+- update advice_repository.dart
+- update advice_bloc.dart
+- update main.dart
