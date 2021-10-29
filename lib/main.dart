@@ -15,10 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Advice App',
+      title: 'Advicer',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.dark,
+      // mehrere Provider MultiBlocProvider
       home: BlocProvider(
         create: (BuildContext context) => AdviceBloc(),
         child: const AdvicePage(),

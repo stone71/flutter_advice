@@ -26,10 +26,6 @@ class AdviceBloc extends Bloc<AdviceEvent, AdviceState> {
         (advice) => AdviceStateLoaded(advice: advice.advice),
       ));
     });
-
-    on<ExampleEvent>((event, emit) {
-      // TODO: implement event handler
-    });
   }
 
   String _mapFailureToMessage(Failure failure) {
