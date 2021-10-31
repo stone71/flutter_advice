@@ -2,14 +2,14 @@ import 'package:flutter_advice/infrastructure/datasources/advice_remote_datasour
 import 'package:flutter_advice/infrastructure/exceptions/exceptions.dart';
 import 'package:flutter_advice/infrastructure/models/advice_model.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../fixtures/fixture_reader.dart';
 import 'advice_remote_datasource_test.mocks.dart';
 
-@GenerateMocks([http.Client])
+@GenerateMocks([Dio])
 void main() {
   late AdviceRemoteDatasource adviceRemoteDatasource;
   late MockClient mockClient;

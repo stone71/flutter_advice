@@ -69,3 +69,8 @@ A new Flutter project.
 - add infrastructure/models/advice_model_test.dart
 - add infrastructure/repository/advice_repository_test.dart
 - add infrastructure/repository/advice_repository_test.mocks.dart
+
+## v0.8 - bugfixing(cors)  and other http client
+- change package http to dio
+- fix to cors in flutter web using (https://thingproxy.freeboard.io/fetch/)
+

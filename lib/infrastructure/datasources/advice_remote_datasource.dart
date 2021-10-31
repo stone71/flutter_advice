@@ -1,8 +1,9 @@
 import 'package:flutter_advice/domain/entities/advice_entity.dart';
 import 'package:flutter_advice/infrastructure/exceptions/exceptions.dart';
 import 'package:flutter_advice/infrastructure/models/advice_model.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
-import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 import 'dart:convert';
 
 abstract class AdviceRemoteDatasource {
@@ -12,23 +13,33 @@ abstract class AdviceRemoteDatasource {
 }
 
 class AdviceRemoteDatasourceImpl implements AdviceRemoteDatasource {
-  final http.Client client;
+  final Dio client;
   AdviceRemoteDatasourceImpl({required this.client});
 
   @override
   Future<AdviceEntity> getRandomAdviceFromApi() async {
+    var url = "https://api.adviceslip.com/advice";
+    if (kIsWeb) {
+      // running on the web!
+      url =
+          "https://thingproxy.freeboard.io/fetch/https://api.adviceslip.com/advice";
+    }
+    //Uri.parse("https://api.adviceslip.com/advice"),
+    //Uri.parse("https://cors-anywhere.herokuapp.com/https://api.adviceslip.com/advice"),
     final response = await client.get(
-      Uri.parse("https://api.adviceslip.com/advice"),
-      headers: {
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*",
-      },
+      url,
+      options: Options(
+        headers: {
+          Headers.contentTypeHeader: 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+      ),
     );
 
     if (response.statusCode != 200) {
       throw ServerException();
     } else {
-      final responseBody = json.decode(response.body);
+      final responseBody = json.decode(response.data);
 
       return AdviceModel.fromJson(responseBody["slip"]);
     }
