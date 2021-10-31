@@ -4,8 +4,9 @@
 
 import 'dart:async' as _i4;
 
-import 'package:flutter_advice/domain/entities/advice_entity.dart' as _i2;
-import 'package:flutter_advice/infrastructure/datasources/advice_remote_datasource.dart'
+import 'package:flutter_advice/domain/advice/entities/advice_entity.dart'
+    as _i2;
+import 'package:flutter_advice/infrastructure/advice/datasources/advice_remote_datasource.dart'
     as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 

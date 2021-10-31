@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter_advice/domain/entities/advice_entity.dart';
-import 'package:flutter_advice/infrastructure/models/advice_model.dart';
+import 'package:flutter_advice/domain/advice/entities/advice_entity.dart';
+import 'package:flutter_advice/infrastructure/advice/models/advice_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../fixtures/fixture_reader.dart';

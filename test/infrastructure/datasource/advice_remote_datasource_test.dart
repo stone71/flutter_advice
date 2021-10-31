@@ -1,15 +1,16 @@
-import 'package:flutter_advice/infrastructure/datasources/advice_remote_datasource.dart';
-import 'package:flutter_advice/infrastructure/exceptions/exceptions.dart';
-import 'package:flutter_advice/infrastructure/models/advice_model.dart';
+import 'package:flutter_advice/infrastructure/advice/datasources/advice_remote_datasource.dart';
+import 'package:flutter_advice/infrastructure/advice/exceptions/exceptions.dart';
+import 'package:flutter_advice/infrastructure/advice/models/advice_model.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dio/dio.dart';
+import 'package:http/http.dart' as http;
+
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../fixtures/fixture_reader.dart';
 import 'advice_remote_datasource_test.mocks.dart';
 
-@GenerateMocks([Dio])
+@GenerateMocks([http.Client])
 void main() {
   late AdviceRemoteDatasource adviceRemoteDatasource;
   late MockClient mockClient;
@@ -48,7 +49,6 @@ void main() {
         Uri.parse("https://api.adviceslip.com/advice"),
         headers: {
           'Content-Type': 'application/json',
-          "Access-Control-Allow-Origin": "*",
         },
       ));
     });

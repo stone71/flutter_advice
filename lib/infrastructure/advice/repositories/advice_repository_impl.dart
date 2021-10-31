@@ -1,8 +1,8 @@
-import 'package:flutter_advice/domain/failures/failures.dart';
-import 'package:flutter_advice/domain/entities/advice_entity.dart';
-import 'package:flutter_advice/domain/repositories/advice_repository.dart';
-import 'package:flutter_advice/infrastructure/datasources/advice_remote_datasource.dart';
-import 'package:flutter_advice/infrastructure/exceptions/exceptions.dart';
+import 'package:flutter_advice/domain/advice/failures/failures.dart';
+import 'package:flutter_advice/domain/advice/entities/advice_entity.dart';
+import 'package:flutter_advice/domain/advice/repositories/advice_repository.dart';
+import 'package:flutter_advice/infrastructure/advice/datasources/advice_remote_datasource.dart';
+import 'package:flutter_advice/infrastructure/advice/exceptions/exceptions.dart';
 import 'package:dartz/dartz.dart';
 
 class AdviceRepositoryImpl implements AdviceRepository {

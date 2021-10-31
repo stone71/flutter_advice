@@ -5,11 +5,13 @@
 import 'dart:async' as _i5;
 
 import 'package:dartz/dartz.dart' as _i3;
-import 'package:flutter_advice/domain/entities/advice_entity.dart' as _i7;
-import 'package:flutter_advice/domain/failures/failures.dart' as _i6;
-import 'package:flutter_advice/domain/repositories/advice_repository.dart'
+import 'package:flutter_advice/domain/advice/entities/advice_entity.dart'
+    as _i7;
+import 'package:flutter_advice/domain/advice/failures/failures.dart' as _i6;
+import 'package:flutter_advice/domain/advice/repositories/advice_repository.dart'
     as _i2;
-import 'package:flutter_advice/domain/usecases/advice_usecases.dart' as _i4;
+import 'package:flutter_advice/domain/advice/usecases/advice_usecases.dart'
+    as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: avoid_redundant_argument_values

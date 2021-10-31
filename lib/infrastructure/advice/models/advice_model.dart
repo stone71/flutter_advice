@@ -1,4 +1,4 @@
-import 'package:flutter_advice/domain/entities/advice_entity.dart';
+import 'package:flutter_advice/domain/advice/entities/advice_entity.dart';
 import 'package:equatable/equatable.dart';
 
 class AdviceModel extends AdviceEntity with EquatableMixin {

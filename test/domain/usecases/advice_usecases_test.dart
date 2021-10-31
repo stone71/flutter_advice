@@ -1,7 +1,7 @@
-import 'package:flutter_advice/domain/entities/advice_entity.dart';
-import 'package:flutter_advice/domain/failures/failures.dart';
-import 'package:flutter_advice/domain/repositories/advice_repository.dart';
-import 'package:flutter_advice/domain/usecases/advice_usecases.dart';
+import 'package:flutter_advice/domain/advice/entities/advice_entity.dart';
+import 'package:flutter_advice/domain/advice/failures/failures.dart';
+import 'package:flutter_advice/domain/advice/repositories/advice_repository.dart';
+import 'package:flutter_advice/domain/advice/usecases/advice_usecases.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';

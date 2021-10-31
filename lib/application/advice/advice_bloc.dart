@@ -3,9 +3,9 @@ import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
-import 'package:flutter_advice/domain/entities/advice_entity.dart';
-import 'package:flutter_advice/domain/failures/failures.dart';
-import 'package:flutter_advice/domain/usecases/advice_usecases.dart';
+import 'package:flutter_advice/domain/advice/entities/advice_entity.dart';
+import 'package:flutter_advice/domain/advice/failures/failures.dart';
+import 'package:flutter_advice/domain/advice/usecases/advice_usecases.dart';
 
 part 'advice_event.dart';
 part 'advice_state.dart';
