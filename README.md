@@ -70,7 +70,10 @@ A new Flutter project.
 - add infrastructure/repository/advice_repository_test.dart
 - add infrastructure/repository/advice_repository_test.mocks.dart
 
-## v0.8 - bugfixing(cors)  and other http client
-- change package http to dio
+## v0.8 - bugfixing(cors) and other http client
 - fix to cors in flutter web using (https://thingproxy.freeboard.io/fetch/)
 
+## v0.9 - refacturing all layer to advice
+- change package dio tp http
+- all layer add advice folder
+- check all tests, there is only a fix to do with the url-test
