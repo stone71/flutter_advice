@@ -77,3 +77,6 @@ A new Flutter project.
 - change package dio tp http
 - all layer add advice folder
 - check all tests, there is only a fix to do with the url-test
+
+## v0.10 - refacturing warnings
+- refacture warnings (only warnings in automated generated mock-files)

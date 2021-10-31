@@ -10,8 +10,8 @@ import 'package:flutter_advice/domain/advice/usecases/advice_usecases.dart';
 part 'advice_event.dart';
 part 'advice_state.dart';
 
-const GENERAL_FAILURE_MESSAGE = "Ups, something gone wrong. Please try again!";
-const SERVER_FAILURE_MESSAGE = "Ups, API Error. please try again!";
+const generalFailureMessage = "Ups, something gone wrong. Please try again!";
+const serverFailureMessage = "Ups, API Error. please try again!";
 
 class AdviceBloc extends Bloc<AdviceEvent, AdviceState> {
   AdviceBloc(AdviceUsecases usecases) : super(AdviceInitial()) {
@@ -31,12 +31,12 @@ class AdviceBloc extends Bloc<AdviceEvent, AdviceState> {
   String _mapFailureToMessage(Failure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
-        return SERVER_FAILURE_MESSAGE;
+        return serverFailureMessage;
       case GeneralFailure:
-        return GENERAL_FAILURE_MESSAGE;
+        return generalFailureMessage;
 
       default:
-        return GENERAL_FAILURE_MESSAGE;
+        return generalFailureMessage;
     }
   }
 }

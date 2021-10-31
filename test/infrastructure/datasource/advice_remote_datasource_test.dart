@@ -33,7 +33,7 @@ void main() {
   }
 
   group("getRandomAdviceFromApi", () {
-    final t_Advice_Model = AdviceModel(advice: "Test", id: 1);
+    final tAdviceModel = AdviceModel(advice: "Test", id: 1);
 
     test(
         "should perform a get request on url with advice being the endpoint and header json",
@@ -62,7 +62,7 @@ void main() {
       final result = await adviceRemoteDatasource.getRandomAdviceFromApi();
 
       //assert
-      expect(result, t_Advice_Model);
+      expect(result, tAdviceModel);
     });
 
     test("should throw ServerException if the response code ist not 200.",
@@ -71,10 +71,10 @@ void main() {
       setUpMockClientFailure404();
 
       //act
-      final call = await adviceRemoteDatasource.getRandomAdviceFromApi;
+      final call = adviceRemoteDatasource.getRandomAdviceFromApi;
 
       //assert
-      expect(() => call(), throwsA(TypeMatcher<ServerException>()));
+      expect(() => call(), throwsA(const TypeMatcher<ServerException>()));
     });
   });
 }

@@ -25,12 +25,12 @@ void main() {
   });
 
   group("AdviceRequestedEvent", () {
-    final t_Advice = AdviceEntity(advice: "Test", id: 1);
-    final t_Advice_String = "Test";
+    final tAdvice = AdviceEntity(advice: "Test", id: 1);
+    const tAdviceString = "Test";
     test("should call usecase if event is added", () async {
       //arrange
       when(mockAdviceUsecases.getAdviceUsecase())
-          .thenAnswer((_) async => Right(t_Advice));
+          .thenAnswer((_) async => Right(tAdvice));
 
       //act
       adviceBloc.add(AdviceRequestedEvent());
@@ -45,12 +45,12 @@ void main() {
         () async {
       // arrange
       when(mockAdviceUsecases.getAdviceUsecase())
-          .thenAnswer((_) async => Right(t_Advice));
+          .thenAnswer((_) async => Right(tAdvice));
 
       //assert later
       final expected = [
         AdviceStateLoading(),
-        AdviceStateLoaded(advice: t_Advice_String)
+        AdviceStateLoaded(advice: tAdviceString)
       ];
       expectLater(adviceBloc.stream, emitsInOrder(expected));
 
@@ -68,7 +68,7 @@ void main() {
       //assert later
       final expected = [
         AdviceStateLoading(),
-        AdviceStateError(message: SERVER_FAILURE_MESSAGE)
+        AdviceStateError(message: serverFailureMessage)
       ];
       expectLater(adviceBloc.stream, emitsInOrder(expected));
 
@@ -86,7 +86,7 @@ void main() {
       //assert later
       final expected = [
         AdviceStateLoading(),
-        AdviceStateError(message: GENERAL_FAILURE_MESSAGE)
+        AdviceStateError(message: generalFailureMessage)
       ];
       expectLater(adviceBloc.stream, emitsInOrder(expected));
 

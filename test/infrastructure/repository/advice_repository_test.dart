@@ -24,8 +24,8 @@ void main() {
   });
 
   group("getAdviceFromAPI", () {
-    final t_AdviceModel = AdviceModel(advice: "test", id: 1);
-    final AdviceEntity t_advice = t_AdviceModel;
+    final tAdviceModel = AdviceModel(advice: "test", id: 1);
+    final AdviceEntity tAdvice = tAdviceModel;
 
     test(
         "should return remote data if the call to remote datasource is successfull",
@@ -33,14 +33,14 @@ void main() {
       // arrange
 
       when(mockAdviceRemoteDatasource.getRandomAdviceFromApi())
-          .thenAnswer((_) async => t_AdviceModel);
+          .thenAnswer((_) async => tAdviceModel);
 
       // act
       final result = await adviceRepository.getAdviceFromApi();
 
       // assert
       verify(mockAdviceRemoteDatasource.getRandomAdviceFromApi());
-      expect(result, Right(t_advice));
+      expect(result, Right(tAdvice));
       verifyNoMoreInteractions(mockAdviceRemoteDatasource);
     });
 
